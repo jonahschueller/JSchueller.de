@@ -1,0 +1,26 @@
+nav {
+     list-style: none;
+}
+
+ul {
+     text-decoration: none;
+     list-style: none;
+}
+
+li {
+
+     text-transform: uppercase;
+}
+
+a {
+     text-decoration: none;
+     color: black;
+     font-size: large;
+     padding: 10px;
+     border-radius: 5px;
+}
+
+a:hover {
+     color: rgb(58, 58, 58);
+     background-color: rgb(226, 226, 226);
+}
