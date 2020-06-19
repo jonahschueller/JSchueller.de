@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Jschueller
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.6.
@@ -25,3 +26,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# JSchueller.de
+>>>>>>> e0665f17b8f14e2c88d52a9f04084b65e62ac225
