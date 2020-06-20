@@ -1,17 +1,8 @@
-ul {
-     text-decoration: none;
-
-}
-
-li {
-     text-decoration: none;
-}
-
 .profile {
      width: 15%;
      margin-left: auto;
      margin-right: auto;
-     margin-top: 50;
+     margin-top: 50px;
 
      border-radius: 15%;
 }
@@ -21,7 +12,53 @@ li {
      border-radius: 50%;
 }
 
+.profile-imgp {
+     text-align: center;
+}
+
 .profile-name {
      text-align: center;
      font-size: 25px;
+}
+
+.skills-p {
+     text-align: center;
+     padding-top: 25px;
+     font-size: 20px;
+}
+
+.reference path {
+     fill: white;
+}
+
+.reference {
+     width: 45px;
+     height: 45px;
+     margin-left: 5px;
+     margin-right: 5px;
+     color: white;
+     background-color: white;
+     padding: 2px;
+     border-radius: 6px;
+}
+
+.references {
+     display: flex;
+     justify-content: space-around;
+}
+
+
+@media (max-width: 700px) {
+     .profile {
+          width: 50%;
+     }
+
+     .profile-img {
+          width: 60%;
+          height: width;
+          align-items: center;
+          margin-left: auto;
+          margin-right: auto;
+     }
+
 }
