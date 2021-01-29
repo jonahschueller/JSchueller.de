@@ -20,8 +20,8 @@
 .meContainer {
   display: grid;
   width: 60%;
-  grid-template-columns: 45% 45%;
-  gap: 5%;
+  grid-template-columns: 40% 40%;
+  gap: 10%;
 }
 
 .meColumn {
@@ -29,10 +29,15 @@
 
 }
 
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
 .subtitle {
   font-size: 1.25rem;
-  font-weight: 700;
-  color: rgba(0.24, 0.24, 0.26, 0.65);
+  font-weight: 600;
+  color: rgba(0.24, 0.24, 0.26, 0.6);
 }
 
 .meText {
@@ -48,4 +53,19 @@
 .avatar {
   width: 400px;
   float: right;
+}
+
+.githubContainer {
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.githubText {
+  padding: 10px;
+  font-weight: 500;
 }
