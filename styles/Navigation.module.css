@@ -4,6 +4,17 @@
     background-color: rgb(31, 30, 36);
     color: white;
     margin: 0px;
+    position: absolute;
+    z-index: 10;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.logo:hover {
+    cursor: pointer;
 }
 
 .navList {
@@ -16,7 +27,7 @@
 
 .navList li {
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.25rem;
     margin-right: 25px;
     text-align: center;

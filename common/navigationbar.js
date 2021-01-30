@@ -1,4 +1,5 @@
 import styles from '../styles/Navigation.module.css';
+import Link from 'next/link'
 
 const NavigationBar = () => {
 
@@ -7,10 +8,19 @@ const NavigationBar = () => {
         <div className={styles.navigation}>
             <ul className={styles.navList}>
                 <li>
-                    Home
+                    <Link href="/">
+                        <img src="/logo.png" className={styles.logo}/>
+                    </Link>
                 </li>
                 <li>
-                    Blog
+                    <Link href="/">
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link href="/blog">
+                        Blog
+                    </Link>
                 </li>
                 <li>
                     Privacy
