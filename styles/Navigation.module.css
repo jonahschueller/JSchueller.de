@@ -1,0 +1,23 @@
+.navigation {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(31, 30, 36);
+    color: white;
+    margin: 0px;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+}
+
+.navList li {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-right: 25px;
+    text-align: center;
+}
