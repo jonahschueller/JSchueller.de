@@ -23,7 +23,8 @@ export default function Home() {
             <h4 className={styles.subtitle}>SOFTWARE DEVELOPER</h4>
             <p className={styles.meText}>
               Hey there 👋, my name is Jonah Schüller. Currently, I am studying
-              computer science at RWTH Aachen University. 🤓 I love to explore the world of ☁️ cloud computing.
+              computer science at RWTH Aachen University. 🤓 <br/>
+              I love to explore the world of ☁️ cloud computing.
             </p>
 
             <GitHubButton/>
