@@ -6,7 +6,7 @@
     margin: 0px;
     top: 0;
     left: 0;
-    position: static;
+    position: absolute;
     z-index: 10;
 }
 
@@ -29,8 +29,9 @@
 
 .navList li {
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1.25rem;
+    font-family: 'Roboto';
     margin-right: 25px;
     text-align: center;
 }

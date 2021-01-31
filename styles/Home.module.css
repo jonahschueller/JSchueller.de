@@ -1,25 +1,25 @@
 .container {
   min-height: 100vh;
-  padding: 0 0.5rem;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
 }
 
 .main {
-  padding: 5rem 0;
+  padding: 0 20%;
   width: 100%;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .meContainer {
   display: grid;
-  width: 60%;
+  /* width: 60%; */
   grid-template-columns: 40% 40%;
   gap: 10%;
 }
@@ -51,7 +51,7 @@
 }
 
 .avatar {
-  width: 400px;
+  width: 100%;
   float: right;
 }
 
@@ -63,9 +63,28 @@
   color: white;
   text-align: center;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .githubText {
   padding: 10px;
   font-weight: 500;
+}
+
+.header {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.header:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: 5rem;
 }

@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Head from 'next/head'
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -32,6 +33,8 @@ export default function Home() {
           </div>
 
         </div>
+
+        <Blog></Blog>
         
       </main>
 
@@ -51,9 +54,21 @@ const GitHubButton = () => {
         <FontAwesomeIcon width="25px" icon={faGithub} />
       </span>
       <span className={styles.githubText}>
-        GitHub
+        Follow me on GitHub
       </span>
     </div>
     </a>
+  )
+}
+
+const Blog = () => {
+  return (
+    <div className={styles.contentContainer}>
+      <Link href="/blog">
+        <div className={styles.header}>
+          &#x2192; Blog
+        </div>
+      </Link>
+    </div>
   )
 }
