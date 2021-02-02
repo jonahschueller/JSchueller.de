@@ -2,37 +2,70 @@ import Link from 'next/link'
 import styles from '../styles/Blog.module.css';
 import commonStyles from '../styles/Content.module.css';
 import Page from '../common/Page'
-import { loadCategories } from '../lib/post';
+import { loadCategories, loadPostsForCategory } from '../lib/post';
 
 
 const Blog = (props) => {
-    console.log(props);
+
+    const sections = props.categories.map(category => {
+        return (
+            <Section 
+                category={category.category}
+                posts={category.posts}>
+            </Section>
+        )
+    })
 
     return (
     <Page title="Blog">
         <div>
             <Link href="/blog#blog">
                 <div className={commonStyles.title}>
-                    &#x2192; Blog
+                    Blog
                 </div>
             </Link>
 
-            <Link href="/blog#featured">
-                <div className={commonStyles.subtitle}>
-                    &#x2192; Featured
-                </div>
-            </Link>
-            {/* {
-                props.categories.map(item => {
-                    return (<div>{item}</div>)
-                })
-            } */}
+            {
+                sections
+            }
         </div>
     </Page>)
 }
 
+const Section = ({ category, posts }) => {
+
+    const postList = posts.map(post => {
+        <div>
+            {post}
+        </div>
+    })
+
+    return (
+        <div>
+            <Link href={`/blog#${category}`}>
+                <div className={commonStyles.subtitle}>
+                    { category }
+                </div>
+            </Link>
+            <div>
+                { postList }
+            </div>
+        </div>
+    )
+}
+
 export const getStaticProps = async () => {
     let cate = loadCategories()
+    .map(category => {
+        let posts = loadPostsForCategory(category)
+        console.log(category);
+        console.log(posts);
+
+        return {
+            category: category,
+            posts: posts
+        }
+    })
 
     return {
         props: {
