@@ -25,9 +25,7 @@ const Blog = (props) => {
                 </div>
             </Link>
 
-            {
-                sections
-            }
+            { sections }
         </div>
     </Page>)
 }
@@ -35,9 +33,10 @@ const Blog = (props) => {
 const Section = ({ category, posts }) => {
 
     const postList = posts.map(post => {
-        <div>
-            {post}
-        </div>
+        return (
+        <Post
+            post={post}>
+        </Post>)
     })
 
     return (
@@ -50,6 +49,14 @@ const Section = ({ category, posts }) => {
             <div>
                 { postList }
             </div>
+        </div>
+    )
+}
+
+const Post = ({ post }) => {
+    return (
+        <div>
+            { post }
         </div>
     )
 }
