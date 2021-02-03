@@ -1,0 +1,18 @@
+{
+    "blog": [
+        {
+            "category": "Featured",
+            "posts": [
+                {
+                    "title": "Test",
+                    "source": "Featured/Test.md"
+                }
+            ]
+        },
+        {
+            "category": "Swift",
+            "posts": [
+            ]
+        }
+    ]
+}

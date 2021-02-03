@@ -2,16 +2,16 @@ import Link from 'next/link'
 import styles from '../styles/Blog.module.css';
 import commonStyles from '../styles/Content.module.css';
 import Page from '../common/Page'
-import { loadCategories, loadPostsForCategory } from '../lib/post';
+import { loadCategories, loadPostsForCategory, loadBlogData } from '../lib/post';
 
 
 const Blog = (props) => {
 
-    const sections = props.categories.map(category => {
+    const sections = props.blog.map(entry => {
         return (
             <Section 
-                category={category.category}
-                posts={category.posts}>
+                category={entry.category}
+                posts={entry.posts}>
             </Section>
         )
     })
@@ -56,27 +56,27 @@ const Section = ({ category, posts }) => {
 const Post = ({ post }) => {
     return (
         <div>
-            { post }
+            { post.title }
         </div>
     )
 }
 
 export const getStaticProps = async () => {
-    let cate = loadCategories()
-    .map(category => {
-        let posts = loadPostsForCategory(category)
-        console.log(category);
-        console.log(posts);
+    let blogContent = loadBlogData()
+    // .map(entry => {
+    //     let posts = loadPostsForCategory(category)
+    //     console.log(category);
+    //     console.log(posts);
 
-        return {
-            category: category,
-            posts: posts
-        }
-    })
+    //     return {
+    //         category: category,
+    //         posts: posts
+    //     }
+    // })
 
     return {
         props: {
-            categories: cate
+            blog: blogContent
         }
     }
 }
