@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import Page from '../../../common/Page'
+import { render } from '../../../lib/markdown'
 import { loadBlogData, loadPost } from '../../../lib/post'
 
 const Post = (props) => {
@@ -7,9 +8,11 @@ const Post = (props) => {
 
     const { category, post } = router.query
 
+    const content = render(props.content)
+
     return (
         <Page>
-            <h1>{JSON.stringify(props)}</h1>
+            <div dangerouslySetInnerHTML={{__html: content}}></div>
         </Page>
     )
 }

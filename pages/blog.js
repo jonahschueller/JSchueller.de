@@ -58,7 +58,7 @@ const Post = ({ post }) => {
         <Link
             href="/blog/[category]/[post]"
             as={`/blog/${post.url}`}>
-            <div>
+            <div className={commonStyles.link}>
                 { post.title }
             </div>
         </Link>
