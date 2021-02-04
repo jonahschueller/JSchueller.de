@@ -34,16 +34,16 @@ export const getStaticPaths = async (props) => {
     }).reduce((prev, curr) => { // Reduce all categories together
         return prev.concat(curr)
     }, [])
-
-    console.log(paths);
     
-    // No fallback ->> 404
+    // Fallback ->> 404
     return { paths, fallback: false }
 }
 
-export const getStaticProps = async ({ category, post }) => {
+export const getStaticProps = async ({ params }) => {
 
-    const content = loadPost(category, post)
+    const content = loadPost(params.category, params.post)
+
+    console.log(content);
 
     return {
         props: {
