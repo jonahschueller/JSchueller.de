@@ -5,6 +5,7 @@
             "posts": [
                 {
                     "title": "Test",
+                    "url": "featured/test",
                     "source": "Featured/Test.md"
                 }
             ]

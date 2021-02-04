@@ -55,24 +55,18 @@ const Section = ({ category, posts }) => {
 
 const Post = ({ post }) => {
     return (
-        <div>
-            { post.title }
-        </div>
+        <Link
+            href="/blog/[category]/[post]"
+            as={`/blog/${post.url}`}>
+            <div>
+                { post.title }
+            </div>
+        </Link>
     )
 }
 
 export const getStaticProps = async () => {
     let blogContent = loadBlogData()
-    // .map(entry => {
-    //     let posts = loadPostsForCategory(category)
-    //     console.log(category);
-    //     console.log(posts);
-
-    //     return {
-    //         category: category,
-    //         posts: posts
-    //     }
-    // })
 
     return {
         props: {
