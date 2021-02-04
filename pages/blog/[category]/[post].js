@@ -3,15 +3,16 @@ import Page from '../../../common/Page'
 import { render } from '../../../lib/markdown'
 import { loadBlogData, loadPost } from '../../../lib/post'
 
-const Post = (props) => {
-    const router = useRouter()
+const Post = ({ post }) => {
+    // const router = useRouter()
 
-    const { category, post } = router.query
+    // const { category, post } = router.query
 
-    const content = render(props.content)
+    const content = render(post.content)
 
     return (
-        <Page>
+        <Page
+            title={post.title}>
             <div dangerouslySetInnerHTML={{__html: content}}></div>
         </Page>
     )
@@ -44,13 +45,11 @@ export const getStaticPaths = async (props) => {
 
 export const getStaticProps = async ({ params }) => {
 
-    const content = loadPost(params.category, params.post)
-
-    console.log(content);
+    const post = loadPost(params.category, params.post)
 
     return {
         props: {
-            content: content
+            post: post
         }
     }
 }
