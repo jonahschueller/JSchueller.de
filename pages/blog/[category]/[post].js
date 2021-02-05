@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import Page from '../../../common/Page'
 import { render } from '../../../lib/markdown'
 import { loadBlogData, loadPost } from '../../../lib/post'
+import styles  from '../../../styles/Post.module.css'
 
 const Post = ({ post }) => {
     // const router = useRouter()
@@ -13,7 +14,9 @@ const Post = ({ post }) => {
     return (
         <Page
             title={post.title}>
-            <div dangerouslySetInnerHTML={{__html: content}}></div>
+            <div
+                className={styles.postContent} 
+                dangerouslySetInnerHTML={{__html: content}}></div>
         </Page>
     )
 }
