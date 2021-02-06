@@ -35,7 +35,7 @@ export default function Home() {
 
         </div>
 
-        <Blog></Blog>
+        <Blog/>
         
       </main>
 

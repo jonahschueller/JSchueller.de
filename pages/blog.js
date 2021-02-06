@@ -43,10 +43,10 @@ const Section = ({ category, posts }) => {
         <div>
             <Link href={`/blog#${category}`}>
                 <div className={commonStyles.subtitle}>
-                    { category }
+                    &#x2192; { category }
                 </div>
             </Link>
-            <div>
+            <div className={styles.postList}>
                 { postList }
             </div>
         </div>
@@ -58,8 +58,13 @@ const Post = ({ post }) => {
         <Link
             href="/blog/[category]/[post]"
             as={`/blog/${post.url}`}>
-            <div className={commonStyles.link}>
-                { post.title }
+            <div className={styles.post}>
+                <div className={styles.postTitle}>
+                    { post.title }
+                </div>
+                <div className={styles.postMeta}>
+                    { post.timestamp } &#x2022; { post.author }
+                </div>
             </div>
         </Link>
     )

@@ -13,7 +13,7 @@
 .postContent p code {
     font-family: 'Courier New', Courier, monospace;
     background-color: #293133;
-    padding: 0.4rem;
-    border-radius: 5px;
+    padding: 4px 8px;
+    border-radius: 8px;
     color: white;
 }

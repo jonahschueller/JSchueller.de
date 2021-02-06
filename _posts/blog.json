@@ -6,7 +6,9 @@
                 {
                     "title": "Test",
                     "url": "featured/test",
-                    "source": "Featured/Test.md"
+                    "source": "Featured/Test.md",
+                    "timestamp": "04.01.2021",
+                    "author": "Jonah Schüller"
                 }
             ]
         },
@@ -16,7 +18,9 @@
                 {
                     "title": "Swift Starter",
                     "url": "swift/swift-starter",
-                    "source": "Swift/Swift-Starter.md"
+                    "source": "Swift/Swift-Starter.md",
+                    "timestamp": "04/01/2021",
+                    "author": "Jonah Schüller"
                 }
             
             ]
