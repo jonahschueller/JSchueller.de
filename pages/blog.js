@@ -18,12 +18,13 @@ const Blog = (props) => {
 
     return (
     <Page title="Blog">
-        <div>
-            <Link href="/blog#blog">
-                <div className={commonStyles.title}>
-                    Blog
-                </div>
-            </Link>
+        <div className={styles.container}>
+            <div className={styles.title}>
+                Blog 👨🏻‍💻
+            </div>
+            <p className={styles.description}>
+                Some of the latest stuff I am working on!
+            </p>
 
             { sections }
         </div>
@@ -43,7 +44,7 @@ const Section = ({ category, posts }) => {
         <div>
             <Link href={`/blog#${category}`}>
                 <div className={commonStyles.subtitle}>
-                    &#x2192; { category }
+                    { category }
                 </div>
             </Link>
             <div className={styles.postList}>
