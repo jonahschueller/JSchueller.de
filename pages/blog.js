@@ -66,6 +66,9 @@ const Post = ({ post }) => {
                 <div className={styles.postTitle}>
                     { post.title }
                 </div>
+                <div className={styles.description}>
+                    { post.description ?? '' }
+                </div>
                 <div className={styles.postMeta}>
                     { post.timestamp } &#x2022; { post.author }
                 </div>
