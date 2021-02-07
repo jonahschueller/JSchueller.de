@@ -23,7 +23,9 @@ const NavigationBar = () => {
                     </Link>
                 </li>
                 <li>
-                    Privacy
+                    <Link href="/privacy">
+                        Privacy
+                    </Link>
                 </li>
             </ul>
         </div>

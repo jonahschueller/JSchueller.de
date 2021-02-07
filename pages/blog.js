@@ -19,6 +19,9 @@ const Blog = (props) => {
     return (
     <Page title="Blog">
         <div className={styles.container}>
+            <div className={styles.construction}>
+                Work in progess! 👷🏻‍♂️
+            </div>
             <div className={styles.title}>
                 Blog 👨🏻‍💻
             </div>
