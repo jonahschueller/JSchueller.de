@@ -2,7 +2,8 @@ import Link from 'next/link'
 import styles from '../styles/Blog.module.css';
 import commonStyles from '../styles/Content.module.css';
 import Page from '../common/Page'
-import { loadCategories, loadPostsForCategory, loadBlogData } from '../lib/post';
+import { loadBlogData } from '../lib/post';
+import PostSection from '../common/post-section';
 
 
 const Blog = (props) => {
@@ -36,13 +37,6 @@ const Blog = (props) => {
 
 const Section = ({ category, posts }) => {
 
-    const postList = posts.map(post => {
-        return (
-        <Post
-            post={post}>
-        </Post>)
-    })
-
     return (
         <div>
             <Link href={`/blog#${category}`}>
@@ -50,30 +44,9 @@ const Section = ({ category, posts }) => {
                     { category }
                 </div>
             </Link>
-            <div className={styles.postList}>
-                { postList }
-            </div>
-        </div>
-    )
-}
 
-const Post = ({ post }) => {
-    return (
-        <Link
-            href="/blog/[category]/[post]"
-            as={`/blog/${post.url}`}>
-            <div className={styles.post}>
-                <div className={styles.postTitle}>
-                    { post.title }
-                </div>
-                <div className={styles.description}>
-                    { post.description ?? '' }
-                </div>
-                <div className={styles.postMeta}>
-                    { post.timestamp } &#x2022; { post.author }
-                </div>
-            </div>
-        </Link>
+            <PostSection posts={posts} />
+        </div>
     )
 }
 

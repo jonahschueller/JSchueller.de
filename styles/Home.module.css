@@ -75,6 +75,7 @@
   font-size: 2rem;
   font-weight: 700;
   text-align: left;
+  width: 100%;
 }
 
 .header:hover {
@@ -83,8 +84,8 @@
 }
 
 .contentContainer {
-  display: flex;
-  justify-content: flex-start;
+  /* display: flex;
+  justify-content: flex-start; */
   width: 100%;
   margin-top: 5rem;
 }

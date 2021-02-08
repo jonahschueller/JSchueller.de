@@ -3,6 +3,8 @@ import Head from 'next/head'
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { loadBlogData } from '../lib/post';
+import PostSection from '../common/post-section';
 
 export default function Home({ featured }) {
   return (
@@ -35,8 +37,7 @@ export default function Home({ featured }) {
 
         </div>
 
-        <Blog
-          posts={featured}/>
+        <Blog posts={featured.posts}/>
         
       </main>
 
@@ -71,6 +72,7 @@ const Blog = ({ posts }) => {
           &#x2192; Blog
         </div>
       </Link>
+      <PostSection posts={posts} />
     </div>
   )
 }
