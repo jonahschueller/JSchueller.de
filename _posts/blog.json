@@ -7,6 +7,7 @@
                     "title": "Test",
                     "url": "featured/test",
                     "source": "Featured/Test.md",
+                    "leftSide": "Featured/Test.md",
                     "timestamp": "04.01.2021",
                     "author": "Jonah Schüller"
                 }
