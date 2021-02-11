@@ -2,7 +2,8 @@ import Link from 'next/link'
 import styles from '../styles/Blog.module.css';
 import commonStyles from '../styles/Content.module.css';
 import Page from '../common/Page'
-import { loadCategories, loadPostsForCategory, loadBlogData } from '../lib/post';
+import { loadBlogData } from '../lib/post';
+import PostSection from '../common/post-section';
 
 
 const Blog = (props) => {
@@ -18,12 +19,16 @@ const Blog = (props) => {
 
     return (
     <Page title="Blog">
-        <div>
-            <Link href="/blog#blog">
-                <div className={commonStyles.title}>
-                    Blog
-                </div>
-            </Link>
+        <div className={styles.container}>
+            <div className={styles.construction}>
+                Work in progess! 👷🏻‍♂️
+            </div>
+            <div className={styles.title}>
+                Blog 👨🏻‍💻
+            </div>
+            <p className={styles.description}>
+                Some of the latest stuff I am working on!
+            </p>
 
             { sections }
         </div>
@@ -32,13 +37,6 @@ const Blog = (props) => {
 
 const Section = ({ category, posts }) => {
 
-    const postList = posts.map(post => {
-        return (
-        <Post
-            post={post}>
-        </Post>)
-    })
-
     return (
         <div>
             <Link href={`/blog#${category}`}>
@@ -46,22 +44,9 @@ const Section = ({ category, posts }) => {
                     { category }
                 </div>
             </Link>
-            <div>
-                { postList }
-            </div>
-        </div>
-    )
-}
 
-const Post = ({ post }) => {
-    return (
-        <Link
-            href="/blog/[category]/[post]"
-            as={`/blog/${post.url}`}>
-            <div className={commonStyles.link}>
-                { post.title }
-            </div>
-        </Link>
+            <PostSection posts={posts} />
+        </div>
     )
 }
 

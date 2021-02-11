@@ -3,8 +3,10 @@ import Head from 'next/head'
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { loadBlogData } from '../lib/post';
+import PostSection from '../common/post-section';
 
-export default function Home() {
+export default function Home({ featured }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -35,7 +37,7 @@ export default function Home() {
 
         </div>
 
-        <Blog></Blog>
+        <Blog posts={featured.posts}/>
         
       </main>
 
@@ -62,7 +64,7 @@ const GitHubButton = () => {
   )
 }
 
-const Blog = () => {
+const Blog = ({ posts }) => {
   return (
     <div className={styles.contentContainer}>
       <Link href="/blog">
@@ -70,6 +72,19 @@ const Blog = () => {
           &#x2192; Blog
         </div>
       </Link>
+      <PostSection posts={posts} />
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+  let blogContent = loadBlogData()
+
+  const featured = blogContent.find(item => item.category === 'Featured')
+
+  return {
+    props: {
+      featured: featured
+    }
+  }
 }
