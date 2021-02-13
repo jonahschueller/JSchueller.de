@@ -1,23 +1,31 @@
-import { useRouter } from 'next/router'
-import Page from '../../../common/Page'
+import commonStyles from '../../../styles/Content.module.css';
 import { render } from '../../../lib/markdown'
 import { loadBlogData, loadPost } from '../../../lib/post'
 import styles  from '../../../styles/Post.module.css'
+import Head from 'next/head'
 
 const Post = ({ post }) => {
-    // const router = useRouter()
-
-    // const { category, post } = router.query
-
     const content = render(post.content)
+    const leftSide = render(post.leftSideContent)
+    const rightSide = render(post.rightSideContent)
 
     return (
-        <Page
-            title={post.title}>
-            <div
-                className={styles.postContent} 
-                dangerouslySetInnerHTML={{__html: content}}></div>
-        </Page>
+        <div>
+            <Head>
+                <title>{post.title}</title>
+            </Head>
+            <div className={styles.container}>
+                <div
+                    className={styles.postContent} 
+                    dangerouslySetInnerHTML={{__html: leftSide}}/>
+                <div
+                    className={styles.postContent} 
+                    dangerouslySetInnerHTML={{__html: content}}/>
+                <div
+                    className={styles.postContent} 
+                    dangerouslySetInnerHTML={{__html: rightSide}}/>
+            </div>
+        </div>
     )
 }
 
