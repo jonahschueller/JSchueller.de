@@ -88,6 +88,10 @@
 
 
 @media only screen and (max-width: 1000px) {
+  .main {
+    padding: 0 10%;
+  }
+
   .meContainer {
     display: flex;
     /* width: 60%; */

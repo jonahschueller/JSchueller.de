@@ -16,13 +16,13 @@ const Post = ({ post }) => {
             </Head>
             <div className={styles.container}>
                 <div
-                    className={styles.postContent} 
+                    className={styles.postRelated} 
                     dangerouslySetInnerHTML={{__html: leftSide}}/>
                 <div
                     className={styles.postContent} 
                     dangerouslySetInnerHTML={{__html: content}}/>
                 <div
-                    className={styles.postContent} 
+                    className={styles.postTableOfContents} 
                     dangerouslySetInnerHTML={{__html: rightSide}}/>
             </div>
         </div>
