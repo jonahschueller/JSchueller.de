@@ -4,12 +4,10 @@
             "category": "Featured",
             "posts": [
                 {
-                    "title": "Test",
-                    "url": "featured/test",
-                    "source": "Featured/Test.md",
-                    "leftSide": "Featured/Test-Left.md",
-                    "rightSide": "Featured/Test-Right.md",
-                    "timestamp": "04.01.2021",
+                    "title": "Featured SwiftUI",
+                    "url": "featured/swiftuiStarter",
+                    "source": "Swift/SwiftUI-Starter.md",
+                    "timestamp": "26.02.2021",
                     "author": "Jonah Schüller"
                 }
             ]
@@ -23,12 +21,19 @@
                     "source": "Swift/Swift-Starter.md",
                     "timestamp": "04/01/2021",
                     "author": "Jonah Schüller"
+                },
+                {
+                    "title": "SwiftUI Starter",
+                    "url": "swift/swiftui-starter",
+                    "source": "Swift/SwiftUI-Starter.md",
+                    "timestamp": "26.02.2021",
+                    "author": "Jonah Schüller"
                 }
             
             ]
         },
         {
-            "category": "Next.js",
+            "category": "Google Cloud Platform",
             "posts": []
         }
     ]
