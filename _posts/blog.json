@@ -4,8 +4,8 @@
             "category": "Featured",
             "posts": [
                 {
-                    "title": "Featured SwiftUI",
-                    "url": "featured/swiftuiStarter",
+                    "title": "SwiftUI Starter",
+                    "url": "featured/swiftui-starter",
                     "source": "Swift/SwiftUI-Starter.md",
                     "timestamp": "26.02.2021",
                     "author": "Jonah Schüller"

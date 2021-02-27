@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 20% 56% 20%;
     gap: 2%;
+    font-family: 'Roboto';
 }
 
 .postContent {
@@ -28,11 +29,11 @@
 }
 
 .postContent p code {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #293133;
-    padding: 4px 8px;
-    border-radius: 8px;
-    color: white;
+    font-family: 'SFMono-Regular', 'Courier New', Courier, monospace;
+    background-color: #e7e7e7;
+    padding: 3px 5px;
+    border-radius: 6px;
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 1000px) {
