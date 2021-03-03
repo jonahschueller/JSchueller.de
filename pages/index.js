@@ -34,10 +34,10 @@ export default function Home({ featured }) {
           </div>
 
         </div>
+        <About/>
 
         <Blog posts={featured.posts}/>
 
-        <About/>
         
       </main>
 
