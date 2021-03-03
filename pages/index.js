@@ -23,11 +23,9 @@ export default function Home({ featured }) {
               Schüller
             </div>
             <h4 className={styles.subtitle}>SOFTWARE DEVELOPER</h4>
-            <p className={styles.meText}>
-              Hey there 👋, my name is Jonah Schüller. Currently, I am studying
-              computer science at RWTH Aachen University. 🤓 <br/>
+            {/* <p className={styles.meText}>
               I love to explore the world of ☁️ cloud computing.
-            </p>
+            </p> */}
 
             <GitHubButton/>
           </div>
@@ -38,6 +36,8 @@ export default function Home({ featured }) {
         </div>
 
         <Blog posts={featured.posts}/>
+
+        <About/>
         
       </main>
 
@@ -73,6 +73,24 @@ const Blog = ({ posts }) => {
         </div>
       </Link>
       <PostSection posts={posts} />
+    </div>
+  )
+}
+
+const About = () => {
+  return (
+    <div className={styles.contentContainer}>
+        <div className={styles.header}>
+          &#x2192; About
+        </div>
+
+        <p>
+          Hey there! 👋 <br/> <br/>
+          My name is Jonah Schüller. Currently, I am studying
+          computer science at RWTH Aachen University. 🤓
+          I am very interrested in computer science. Things I like the most are iOS mobile development, cloud computing, DevOps and web development but I also enjoy machine learning and data science. <br/> <br/>
+          Besides computer science I love to play the electric guitar and make music. 🎸
+        </p>
     </div>
   )
 }
